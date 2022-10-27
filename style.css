@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
+@font-face {
+  font-family: vazirdig;
+  src: url(../Assets/Font/Vazir-Medium-FD.woff2);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1b1b1b;
+  background-color: #da291c;
+}
+
+main {
+  height: 90vh;
+  width: 90vw;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-dir {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-shrink {
+  flex-shrink: 0;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-space {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.gap-0 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+.gap-5 {
+  gap: 5rem;
+}
+
+.gap-6 {
+  gap: 6rem;
+}
+
+.pad-4 {
+  padding: 4rem;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.section-menu {
+  height: 96%;
+  width: 68%;
+  background-color: #f0f8ff;
+  border-radius: 1.4rem;
+}
+.section-menu__heading {
+  color: #1b1b1b;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.products {
+  direction: ltr;
+  padding: 1.6rem 2.2rem;
+  height: 79%;
+  overflow: overlay;
+  flex-wrap: wrap;
+}
+.products__card {
+  direction: rtl;
+  background-color: #fff;
+  height: 9.6rem;
+  width: 47%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 4px;
+  font-family: 'vazirdig';
+}
+.products__box-img {
+  width: 11rem;
+  height: 9.6rem;
+}
+.products__img {
+  width: 11rem;
+  height: 9.6rem;
+}
+.products__detail {
+  width: 100%;
+  padding: 0.8rem;
+}
+.products__detail--name {
+  font-weight: 900;
+}
+.products__detail--price {
+  margin-bottom: 0.8rem;
+}
+
+.section-card {
+  min-height: 30rem;
+  width: 40rem;
+  background-color: #f0f8ff;
+  border-radius: 1.4rem;
+  padding: 1.6rem 2.8rem;
+  font-size: 1.4rem;
+  font-family: 'vazirdig';
+}
+.section-card__details {
+  font-size: 1.8rem;
+}
+.section-card__input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+}
+.section-card__off {
+  margin-bottom: 3.4rem;
+}
+.section-card__pay {
+  background-color: #ffc72c;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'vazirdig';
+  font-size: 1.6rem;
+}
+.section-card__order {
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+}
+.btn--add,
+.btn--minus {
+  background-color: #9e1010;
+  padding: 0.29rem 0.3rem;
+}
+.btn--add {
+  border-radius: 0 4px 4px 0;
+}
+.btn--minus {
+  border-radius: 4px 0 0 4px;
+}
+.btn--check {
+  background-color: #9e1010;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding: 0 0.8rem;
+}
+.btn--order {
+  background-color: #9e1010;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.6rem;
+  width: 100%;
+  border-radius: 0.4rem;
+}
+.btn--ok {
+  width: 10rem;
+  background-color: #9e1010;
+  padding: 1rem 3rem;
+}
+
+ion-icon {
+  --ionicon-stroke-width: 57px;
+  font-size: 1.8rem;
+}
+ion-icon[name='checkmark-outline'] {
+  --ionicon-stroke-width: 48px;
+  padding-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.num {
+  padding: 0 1rem;
+  background-color: #f0f8ff;
+  font-family: 'vazirdig';
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#modal {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: +10;
+  border-radius: 1rem;
+}
+
+#modal.show {
+  animation: show 0.5s forwards;
+}
+
+#modal.close {
+  animation: close 0.5s forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  95% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  5% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@media screen and (max-width: 1116px) {
+  .products {
+    height: 78%;
+  }
+  .products__card {
+    height: 11.6rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  .section-menu {
+    width: 100%;
+    height: 100%;
+  }
+  .section-card {
+    min-height: 33rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .products {
+    padding: 1.4rem 1.8rem;
+  }
+}

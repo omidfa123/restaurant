@@ -1,0 +1,236 @@
+.section-menu {
+  height: 96%;
+  width: 100% - 32%;
+  background-color: $color-white;
+  border-radius: 1.4rem;
+  &__heading {
+    color: $color-black;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+  }
+}
+.products {
+  direction: ltr;
+  padding: 1.6rem 2.2rem;
+  height: 79%;
+  overflow: overlay;
+  flex-wrap: wrap;
+  &__card {
+    direction: rtl;
+    background-color: #fff;
+    height: 9.6rem;
+    width: 47%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-radius: 4px;
+    font-family: "vazirdig";
+  }
+  &__box-img {
+    width: 11rem;
+    height: 9.6rem;
+  }
+  &__img {
+    width: 11rem;
+    height: 9.6rem;
+  }
+  &__detail {
+    width: 100%;
+    padding: 0.8rem;
+  }
+  &__detail--name {
+    font-weight: 900;
+  }
+  &__detail--price {
+    margin-bottom: 0.8rem;
+  }
+}
+.section-card {
+  min-height: 30rem;
+  width: 40rem;
+  background-color: $color-white;
+  border-radius: 1.4rem;
+  padding: 1.6rem 2.8rem;
+  font-size: 1.4rem;
+  font-family: "vazirdig";
+  &__details {
+    font-size: 1.8rem;
+  }
+  &__input {
+    font-family: inherit;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+  }
+  &__off {
+    margin-bottom: 3.4rem;
+  }
+  &__pay {
+    background-color: $color-yellowed;
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: "vazirdig";
+    font-size: 1.6rem;
+  }
+  &__order {
+    width: 100%;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  &--add,
+  &--minus {
+    background-color: $color-accent;
+    padding: 0.29rem 0.3rem;
+  }
+  &--add {
+    border-radius: 0 4px 4px 0;
+  }
+  &--minus {
+    border-radius: 4px 0 0 4px;
+  }
+  &--check {
+    background-color: $color-accent;
+    border-radius: 0.4rem 0 0 0.4rem;
+    padding: 0 0.8rem;
+  }
+  &--order {
+    background-color: $color-accent;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1.6rem;
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+  &--ok {
+    width: 10rem;
+    background-color: $color-accent;
+    padding: 1rem 3rem;
+  }
+}
+ion-icon {
+  --ionicon-stroke-width: 57px;
+  font-size: 1.8rem;
+  &[name="checkmark-outline"] {
+    --ionicon-stroke-width: 48px;
+    padding-top: 0.5rem;
+    font-size: 2rem;
+  }
+}
+.num {
+  padding: 0 1rem;
+  background-color: $color-white;
+  font-family: "vazirdig";
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#modal {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: +10;
+  border-radius: 1rem;
+}
+
+#modal.show {
+  animation: show 0.5s forwards;
+}
+
+#modal.close {
+  animation: close 0.5s forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  95% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  5% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@media screen and (max-width: 1116px) {
+  .products {
+    height: 78%;
+    &__card {
+      height: 11.6rem;
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  .section-menu {
+    width: 100%;
+    height: 100%;
+  }
+  .section-card {
+    min-height: 33rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .products {
+    padding: 1.4rem 1.8rem;
+  }
+}

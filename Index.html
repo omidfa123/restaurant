@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app2.js" defer></script>
+  </head>
+  <body class="d-flex align-center justify-center">
+    <main class="main d-flex gap-5 align-start">
+      <section class="section-menu">
+        <h1 class="section-menu__heading">رستوران مک دونالد شعبه جیرفت</h1>
+        <div class="products d-flex gap-3"></div>
+      </section>
+      <section class="section-card">
+        <div class="section-card__details d-flex flex-dir gap-1">
+          <div class="d-flex justify-between">
+            <p>جمع کل سفارشات:</p>
+            <p class="d-flex gap-0"><span id="all-price">0</span>تومان</p>
+          </div>
+          <div class="d-flex justify-between">
+            <p>حق سرویس و کارمزد:</p>
+            <p class="d-flex gap-0"><span id="serves">0</span>تومان</p>
+          </div>
+          <div class="d-flex justify-between">
+            <p>تخفیف:</p>
+            <p class="d-flex gap-0"><span id="off">0</span>درصد</p>
+          </div>
+          <div class="section-card__off d-flex">
+            <input
+              class="section-card__input"
+              type="text"
+              placeholder="کد تخفیف"
+              id="off-input"
+            />
+            <button id="off-check" class="btn btn--check">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </button>
+          </div>
+          <div class="section-card__pay">
+            <div class="d-flex justify-between">
+              <p>مبلغ قابل پرداخت:</p>
+              <p class="d-flex gap-0"><span id="pay">0</span>تومان</p>
+            </div>
+          </div>
+          <div class="section-card__order">
+            <button class="btn btn--order">ثبت سفارش</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="overlay" class="overlay hide"></div>
+    <div id="modal" class="hide d-flex flex-dir align-center gap-3 pad-4">
+      <p>سفارش شما با موفقیت ثبت شد.</p>
+      <button class="btn btn--ok">باشه</button>
+    </div>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</html>
